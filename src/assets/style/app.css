@@ -26,6 +26,14 @@ a {
   border: none;
   background: var(--primary);
 }
+.footer__nav__menu__liste__el__a,
+.header__nav__liste__el__a {
+  transition: 0.3s;
+}
+.footer__nav__menu__liste__el__a:hover,
+.header__nav__liste__el__a:hover {
+  color: var(--primary);
+}
 
 /** Header **/
 .header {
@@ -42,6 +50,10 @@ a {
   border-radius: 0 0 10px 10px;
   background: var(--degrade);
   font-family: "Oswald", sans-serif;
+}
+.header__logo {
+  width: auto;
+  height: 70%;
 }
 .header__nav {
   width: 100vw;
@@ -101,7 +113,7 @@ a {
 }
 .accueil__figure__button,
 .guitares__list__btn {
-  margin: 3vh 30vw;
+  margin: 3vh auto;
   display: block;
   text-align: center;
   width: 30vw;
@@ -114,31 +126,22 @@ a {
   border-radius: 3px;
   transition: 0.5s;
 }
-.accueil__figure__button:hover {
+.accueil__figure__button:hover,
+.guitares__list__btn:hover {
   cursor: pointer;
   color: white;
-  border: white;
+  font-size: 0.9em;
   background: var(--primary);
 }
 
-/** Histoire **/
+/** Les guitares **/
+.guitares,
 .histoire {
   width: 90vw;
-  padding: 7vh 5vw;
+  margin: 7vh auto;
 }
+.guitares__title,
 .histoire__title {
-  font-size: 2.5em;
-  margin-bottom: 2vh;
-  font-family: "Oswald", sans-serif;
-  color: var(--primary);
-}
-
-/** Les guitares **/
-.guitares {
-  width: 90vw;
-  padding: 7vh 5vw;
-}
-.guitares__title {
   font-size: 2.5em;
   margin-bottom: 2vh;
   font-family: "Oswald", sans-serif;
@@ -184,8 +187,146 @@ a {
 .footer .separation {
   margin: 3vh 0;
 }
+.footer__menu__title {
+  color: var(--primary);
+  font-size: 2em;
+  margin-bottom: 3vh;
+  font-family: "Oswald", sans-serif;
+}
 .footer__nav__menu__liste__el {
   font-family: "Oswald", sans-serif;
   font-size: 1em;
   margin-bottom: 1.5vh;
+}
+
+/*************************************Dimensionnement pour les grands écrans********************************************/
+@media screen and (min-width: 1024px) {
+  /** Initialisation **/
+  body {
+    overflow-x: hidden;
+  }
+  .separation {
+    width: 10vw;
+  }
+
+  /** Header **/
+  .header {
+    width: 60vw;
+    left: 15vw;
+    z-index: 99;
+  }
+  .header__burger {
+    display: none;
+  }
+  .header__nav {
+    width: 40%;
+    height: 100%;
+    padding: 0;
+    position: static;
+    background: none;
+    z-index: 0;
+    text-align: left;
+    transition: 0.7s;
+  }
+  .header__nav__title {
+    display: none;
+  }
+  .header__nav__liste {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+    font-size: 1.3em;
+  }
+  .header__nav__liste__el {
+    padding-top: 0;
+  }
+  .header__nav__close {
+    display: none;
+  }
+
+  /** Accueil **/
+  .accueil {
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .accueil__figure__button,
+  .guitares__list__btn {
+    width: 15vw;
+    padding: 1.5vw;
+  }
+  .accueil__figure__button:hover {
+    cursor: pointer;
+    color: white;
+    border: white;
+    background: var(--primary);
+  }
+
+  /** Les histoires **/
+  .histoire {
+    width: 75vw;
+  }
+
+  /** Les guitares **/
+  .guitares {
+    width: 50vw;
+  }
+  .guitares,
+  .histoire {
+    margin: 7.5vh auto;
+  }
+  .guitares__title,
+  .histoire__title {
+    text-align: center;
+    margin-bottom: 4vh;
+  }
+  .guitares__list__item {
+    height: 30vh;
+    margin-top: 10vh;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .guitares__list__item:nth-child(odd) {
+    flex-direction: row;
+  }
+  .guitares__list__title {
+    font-size: 2em;
+    text-align: left;
+  }
+  .guitares__list__item:nth-child(odd) .guitares__list__title {
+    text-align: right;
+  }
+  .guitares__list__zone {
+    width: 50%;
+  }
+  .guitares__list__zone p {
+    text-align: justify;
+  }
+  .guitares__list__zone__img {
+    margin: auto;
+    height: 100%;
+  }
+  .guitares__list__img {
+    height: 100%;
+    width: auto;
+  }
+  .guitares__list__btn {
+    margin: 3vh auto;
+  }
+
+  /** Footer **/
+  .footer {
+    width: 60vw;
+    padding: 5vh 20vw;
+    flex-direction: row;
+  }
+  .footer .separation {
+    height: 10vh;
+    width: 0.3vw;
+    margin: 0;
+  }
 }
