@@ -138,6 +138,7 @@ a {
 .guitares,
 .histoire {
   width: 90vw;
+  padding: 7vh 0;
   margin: 7vh auto;
 }
 .guitares__title,
@@ -277,6 +278,7 @@ a {
   }
   .guitares,
   .histoire {
+    padding: 10vh 0;
     margin: 7.5vh auto;
   }
   .guitares__title,
