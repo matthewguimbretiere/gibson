@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles.scss" />
+    <script
+      src="https://kit.fontawesome.com/4020e9bdd2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="./assets/style/app.css" />
+    <link rel="icon" type="image/png" href="assets/img/icone.png" />
     <title>
       Guitare Gibson - Guitares électrique, acoustique, basses électrique,
       mandolines...
@@ -11,7 +17,10 @@
   </head>
   <body>
     <!--Header-->
-    <header>
+    <header class="header">
+      <button class="header__burger" id="btn_burger">
+        <i class="fas fa-bars"></i>
+      </button>
       <img
         srcset="
           ./assets/img/logo/logo-233.webp 233w,
@@ -20,24 +29,33 @@
         sizes="10vw"
         src="./assets/img/logo/logo-389.webp"
         alt="Logo de Gibson"
+        class="header__logo"
       />
-      <nav>
-        <ul>
-          <li>
-            <a href="#accueil">Accueil</a>
+      <nav class="header__nav">
+        <button class="header__nav__close" id="btn_nav_close">
+          <i class="fas fa-times-circle"></i>
+        </button>
+        <h1 class="header__nav__title">Menu</h1>
+        <ul class="header__nav__liste">
+          <li class="header__nav__liste__el">
+            <a class="header__nav__liste__el__a" href="#accueil"> Accueil </a>
           </li>
-          <li>
-            <a href="#histoire">Notre histoire</a>
+          <li class="header__nav__liste__el">
+            <a class="header__nav__liste__el__a" href="#histoire">
+              Notre histoire
+            </a>
           </li>
-          <li>
-            <a href="#guitares">Nos guitares</a>
+          <li class="header__nav__liste__el">
+            <a class="header__nav__liste__el__a" href="#guitares">
+              Nos guitares
+            </a>
           </li>
         </ul>
       </nav>
     </header>
     <!--Image présentation-->
-    <section id="accueil">
-      <figure>
+    <section id="accueil" class="accueil">
+      <figure class="accueil__figure">
         <img
           srcset="
             ./assets/img/fond-500.webp   500w,
@@ -46,19 +64,22 @@
           sizes="80vw"
           src="./assets/img/fond-1000.webp"
           alt="Panoplie de guitare Gibson"
+          class="accueil__figure__img"
         />
-        <figcaption>
+        <figcaption class="accueil__figure__legende">
           Bienvenue dans l'univers des guitares Gibson. Depuis 1902, Gibson est
           LA référence pour tout types de guitares : acoustiques, électriques,
           basses électriques, mandoline, ... Nous avons la guitare qu'il vous
           faut, découvrez là ci-dessous !
         </figcaption>
       </figure>
+      <a class="accueil__figure__button" href="#guitares"> Découvrir </a>
     </section>
+    <hr class="separation" />
     <!--Histoire de Gibson-->
-    <section id="histoire">
-      <h2>Notre histoire</h2>
-      <p>
+    <section id="histoire" class="histoire">
+      <h2 class="histoire__title">Notre histoire</h2>
+      <p class="histoire__descr">
         Orville Gibson est né en 1856, à Chateaugay dans l’état de New York.<br />
         Dès son enfance, il se trouve deux passions. La lutherie et le travail
         du bois ainsi que l’apprentissage de la mandoline et de la guitare. En
@@ -73,28 +94,33 @@
         nouveaux types de guitares.
       </p>
     </section>
+    <hr class="separation" />
     <!--Les guitares-->
-    <section id="guitares">
-      <h2>Nos guitares</h2>
+    <section id="guitares" class="guitares">
+      <h2 class="guitares__title">Nos guitares</h2>
       <!-- Les paul -->
-      <article>
+      <article class="guitares__list__item">
+        <div class="guitares__list__zone">
+          <h2 class="guitares__list__title">LES PAUL</h2>
+          <p>
+            La Gibson Les Paul est une guitare électrique de type « corps plein
+            ».
+          </p>
+          <p>
+            Nombreux sont les guitaristes de renom qui ont utilisé (ou
+            utilisent) une guitare Les Paul. Il est difficile de n'en citer que
+            quelques-uns, si illustres soient-ils. Selon les goûts de chacun,
+            tel ou tel artiste a une importance différente, de telle sorte
+            qu'afin de faire preuve d'impartialité, le mieux semble de n'en
+            citer aucun.
+          </p>
+          <a
+            href="https://www.gibson.com/Guitars/Les-Paul"
+            class="guitares__list__btn"
+            >En acheter une</a
+          >
+        </div>
         <div>
-          <h2>LES PAUL</h2>
-          <div>
-            <p>
-              La Gibson Les Paul est une guitare électrique de type « corps
-              plein ».
-            </p>
-            <p>
-              Nombreux sont les guitaristes de renom qui ont utilisé (ou
-              utilisent) une guitare Les Paul. Il est difficile de n'en citer
-              que quelques-uns, si illustres soient-ils. Selon les goûts de
-              chacun, tel ou tel artiste a une importance différente, de telle
-              sorte qu'afin de faire preuve d'impartialité, le mieux semble de
-              n'en citer aucun.
-            </p>
-            <a href="https://www.gibson.com/Guitars/Les-Paul">En acheter une</a>
-          </div>
           <img
             srcset="
               ./assets/img/guitares/les_paul-250.webp 250h,
@@ -103,11 +129,12 @@
             sizes="20vw"
             src="./assets/img/guitares/les_paul-500.webp"
             alt="Guitare Les Paul Gibson"
+            class="guitares__list__img"
           />
         </div>
       </article>
       <!-- SG -->
-      <article>
+      <article class="guitares__list__item">
         <div>
           <img
             srcset="
@@ -117,31 +144,38 @@
             sizes="20vw"
             src="./assets/img/guitares/sg-500.webp"
             alt="Guitare SG Gibson"
+            class="guitares__list__img"
           />
         </div>
-        <h2>SG</h2>
-        <div>
+        <div class="guitares__list__zone">
+          <h2 class="guitares__list__title">SG</h2>
           <p>
             La Gibson SG est un modèle de guitare électrique de type « corps
             plein », c'est-à-dire ne possédant pas de caisse de résonance. Les
             initiales SG signifient Solid Guitar.
           </p>
-          <a href="https://www.gibson.com/Guitars/SG">En acheter une</a>
+          <a
+            href="https://www.gibson.com/Guitars/SG"
+            class="guitares__list__btn"
+            >En acheter une</a
+          >
         </div>
-        >
       </article>
       <!-- ES -->
-      <article>
-        <div>
-          <h2>ES</h2>
-          <div>
-            <p>
-              La Gibson ES-335 est une guitare électrique de type «
-              quart-de-caisse » et « semi-creuse ».
-            </p>
-            <a href="https://www.gibson.com/Guitars/ES">En acheter une</a>
-          </div>
+      <article class="guitares__list__item">
+        <div class="guitares__list__zone">
+          <h2 class="guitares__list__title">ES</h2>
+          <p>
+            La Gibson ES-335 est une guitare électrique de type «
+            quart-de-caisse » et « semi-creuse ».
+          </p>
+          <a
+            href="https://www.gibson.com/Guitars/ES"
+            class="guitares__list__btn"
+            >En acheter une</a
           >
+        </div>
+        <div>
           <img
             srcset="
               ./assets/img/guitares/es-250.webp 250h,
@@ -150,11 +184,12 @@
             sizes="20vw"
             src="./assets/img/guitares/es-500.webp"
             alt="Guitare ES Gibson"
+            class="guitares__list__img"
           />
         </div>
       </article>
       <!-- Acoustic -->
-      <article>
+      <article class="guitares__list__item">
         <div>
           <img
             srcset="
@@ -164,10 +199,11 @@
             sizes="20vw"
             src="./assets/img/guitares/acoustic-500.webp"
             alt="Guitare Acoustic Gibson"
+            class="guitares__list__img"
           />
         </div>
-        <h2>Acoustic</h2>
-        <div>
+        <div class="guitares__list__zone">
+          <h2 class="guitares__list__title">Acoustic</h2>
           <p>
             La Gibson J-45 est une guitare acoustique fabriquée par la firme
             Gibson Guitar Corporation. Elle a été commercialisée à partir de
@@ -179,22 +215,29 @@
             reprenant les mêmes bois et procédés de fabrication tels que lors de
             son introduction en 1942 3.
           </p>
-          <a href="https://www.gibson.com/Guitars/Acoustic">En acheter une</a>
+          <a
+            href="https://www.gibson.com/Guitars/Acoustic"
+            class="guitares__list__btn"
+            >En acheter une</a
+          >
         </div>
       </article>
       <!-- Designer -->
-      <article>
-        <div>
-          <h2>Designer</h2>
-          <div>
-            <p>
-              Les premiers modèles de Gibson Explorer sont sortis en 1958.
-              Initialement nommée Futura, elle offrait un design pour son corps
-              radical et futuriste, un peu comme la Gibson Flying V.
-            </p>
-            <a href="https://www.gibson.com/Guitars/Designer">En acheter une</a>
-          </div>
+      <article class="guitares__list__item">
+        <div class="guitares__list__zone">
+          <h2 class="guitares__list__title">Designer</h2>
+          <p>
+            Les premiers modèles de Gibson Explorer sont sortis en 1958.
+            Initialement nommée Futura, elle offrait un design pour son corps
+            radical et futuriste, un peu comme la Gibson Flying V.
+          </p>
+          <a
+            href="https://www.gibson.com/Guitars/Designer"
+            class="guitares__list__btn"
+            >En acheter une</a
           >
+        </div>
+        <div>
           <img
             srcset="
               ./assets/img/guitares/designer-250.webp 250h,
@@ -203,9 +246,50 @@
             sizes="20vw"
             src="./assets/img/guitares/designer-500.webp"
             alt="Guitare Designer Gibson"
+            class="guitares__list__img"
           />
         </div>
       </article>
     </section>
+    <!-- Bas de la page -->
+    <footer class="footer">
+      <nav class="footer__menu">
+        <ul class="footer__menu__ul">
+          <li class="footer__nav__menu__liste__el">
+            <a class="footer__nav__menu__liste__el__a" href="#accueil">
+              Accueil
+            </a>
+          </li>
+          <li class="footer__nav__menu__liste__el">
+            <a class="footer__nav__menu__liste__el__a" href="#histoire">
+              Notre histoire
+            </a>
+          </li>
+          <li class="footer__nav__menu__liste__el">
+            <a class="footer__nav__menu__liste__el__a" href="#guitares">
+              Nos guitares
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <hr class="separation" />
+      <nav class="footer__menu">
+        <ul class="footer__menu__ul">
+          <li class="footer__nav__menu__liste__el">
+            <a
+              class="footer__nav__menu__liste__el__a"
+              href="https://www.gibson.com/"
+            >
+              Accéder au site officiel
+            </a>
+          </li>
+          <li class="footer__nav__liste__el">
+            Copyright 2021 Gibson Brands, Inc.
+          </li>
+          <li class="footer__nav__liste__el">All rights reserved.</li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

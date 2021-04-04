@@ -1,0 +1,191 @@
+/**Importation des polices**/
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap");
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/**Initialisation**/
+:root {
+  --primary: #e9a418;
+  --secondary: #97250a;
+  --tertiary: #370b02;
+  --degrade: linear-gradient(to bottom, #370b02, #97250a 20%, #e9a418);
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.separation {
+  width: 20vw;
+  height: 0.5vh;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+}
+
+/** Header **/
+.header {
+  width: 70vw;
+  height: 7vh;
+  padding: 0 5vw;
+  position: fixed;
+  top: 0;
+  left: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  background: var(--degrade);
+  font-family: "Oswald", sans-serif;
+}
+.header__nav {
+  width: 100vw;
+  height: 80vh;
+  padding: 10vh 0;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  background: var(--degrade);
+  z-index: 9;
+  text-align: center;
+  transition: 0.7s;
+}
+.header__nav__title {
+  margin: 5vh 0;
+  font-size: 3em;
+  color: var(--primary);
+}
+.header__nav__liste {
+  margin-top: 10vh;
+  font-size: 1.3em;
+}
+.header__nav__liste__el {
+  padding-top: 3vh;
+}
+.header__nav__close {
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: var(--primary);
+}
+.header__burger {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: var(--primary);
+}
+
+/** Accueil **/
+.accueil {
+  width: 100vw;
+  padding-top: 8vh;
+}
+.accueil__figure {
+  width: 100%;
+}
+.accueil__figure__img {
+  width: 100%;
+  height: auto;
+}
+.accueil__figure__legende {
+  text-align: center;
+  padding: 3vh 3vh 0 3vh;
+}
+.accueil__figure__button,
+.guitares__list__btn {
+  margin: 3vh 30vw;
+  display: block;
+  text-align: center;
+  width: 30vw;
+  padding: 3vw;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  border: 3px solid var(--primary);
+  background: none;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+.accueil__figure__button:hover {
+  cursor: pointer;
+  color: white;
+  border: white;
+  background: var(--primary);
+}
+
+/** Histoire **/
+.histoire {
+  width: 90vw;
+  padding: 7vh 5vw;
+}
+.histoire__title {
+  font-size: 2.5em;
+  margin-bottom: 2vh;
+  font-family: "Oswald", sans-serif;
+  color: var(--primary);
+}
+
+/** Les guitares **/
+.guitares {
+  width: 90vw;
+  padding: 7vh 5vw;
+}
+.guitares__title {
+  font-size: 2.5em;
+  margin-bottom: 2vh;
+  font-family: "Oswald", sans-serif;
+  color: var(--primary);
+}
+.guitares__list__item {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.guitares__list__item:nth-child(odd) {
+  flex-direction: column-reverse;
+}
+.guitares__list__title {
+  font-size: 1.5em;
+  padding-bottom: 3vh;
+  color: var(--secondary);
+  text-align: center;
+  text-transform: uppercase;
+}
+.guitares__list__zone {
+  width: 100%;
+}
+.guitares__list__btn {
+  margin: 3vh 25vw;
+}
+
+/** Footer **/
+.footer {
+  background: var(--degrade);
+  width: 100vw;
+  padding: 5vh 0;
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  z-index: 8;
+}
+.footer .separation {
+  margin: 3vh 0;
+}
+.footer__nav__menu__liste__el {
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+  margin-bottom: 1.5vh;
+}
